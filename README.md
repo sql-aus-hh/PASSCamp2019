@@ -2,7 +2,23 @@
 ## Track 3: Infrastructure & Administration
 ### Powershell Automation, Hybrid Multiplatform Database System, Scaling Databases Performance Optimization, Security&Monitoring, DataStorage, Data Migration&Upgrade
 
-#### Speaker - Björn Peters - Azure Kubernetes Services
-#### Donnerstag Vormittags Session
-
 http://www.passcamp.de/index.html
+
+#### Donnerstag Vormittags Session
+#### Speaker - Björn Peters - Azure Kubernetes Services
+
+Aufgabe 1:
+Deployment of Azure Kubernetes Services via Portal
+[HandsOn 1](https://github.com/sql-aus-hh/PASSCamp2019/blob/master/HandsOn-1.md)
+
+Aufgabe 2:
+Deployment of Azure Container Registry via Powershell/CLI
+[HandsOn 2](https://github.com/sql-aus-hh/PASSCamp2019/blob/master/HandsOn-2.md)
+
+Aufgabe 3:
+Create new container and push it to ACR and then to AKS with loadbalanced traffic
+[HandsOn 3](https://github.com/sql-aus-hh/PASSCamp2019/blob/master/HandsOn-3.md)
+
+Aufgabe 4:
+Push SQL Server Container to ACR and create your first SQL Server running high-available on AKS
+[HandsOn 4](https://github.com/sql-aus-hh/PASSCamp2019/blob/master/HandsOn-4.md)
