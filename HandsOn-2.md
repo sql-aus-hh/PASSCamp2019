@@ -24,9 +24,9 @@ Bitte eigenständig die Kommandozeile zusammenstellen (nicht cheaten ;-) )
   <summary>Hilfe</summary>
   <p>
 
-  '''posh
+  '''PowerShell
   az group create --name RG-AzureContainerRegistry --location eastus
-
+\```
 </details>
 
 az acr create --resource-group RG-AzureContainerRegistry --name PASSCamp-ACR --sku Basic
