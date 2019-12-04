@@ -27,20 +27,94 @@ Bitte eigenständig die Kommandozeile zusammenstellen (nicht cheaten ;-) )
   ```PowerShell
   az group create --name RG-AzureContainerRegistry --location eastus
 ```
+</p>
 </details>
 
-az acr create --resource-group RG-AzureContainerRegistry --name PASSCamp-ACR --sku Basic
+#### Erstellen einer neuen Container Registry in der Ressourcen-Gruppe 'RG-AzureContainerRegistry'
+<details>
+  <summary>Hilfe</summary>
+  <p>
 
-az acr login --name PASSCamp-ACR
+    ```PowerShell
+        az acr create --resource-group RG-AzureContainerRegistry --name PASSCamp-ACR --sku Basic
+```
+    </p>
+</details>
 
-docker images
+#### Einloggen in die neue Container-Registry
+<details>
+  <summary>Hilfe</summary>
+  <p>
 
-az acr list --resource-group RG-AzureContainerRegistry --query "[].{acrLoginServer:loginServer}" --output table
+  ```PowerShell
+        az acr login --name PASSCamp-ACR
+```
+    </p>
+</details>
 
-docker tag azure-vote-front passcampacr.azurecr.io/azure-vote-front:v1
+#### Lasst euch die vorhandenen lokalen Docker-Images anzeigen
+<details>
+  <summary>Hilfe</summary>
+  <p>
 
-docker images
+  ```PowerShell
+    docker images
+```
+    </p>
+</details>
 
-docker push passcampacr.azurecr.io/azure-vote-front:v1
+#### Ermittelt den Login-Server eurer Contaier-Registry
+<details>
+  <summary>Hilfe</summary>
+  <p>
 
-az acr repository show-tags --name PASSCamp-ACR --repository azure-vote-front --output table
+  ```PowerShell
+    az acr list --resource-group RG-AzureContainerRegistry --query "[].{acrLoginServer:loginServer}" --output table
+```
+    </p>
+</details>
+
+#### Tagged euren SQL-Server-Container (aus dem Handson mit Frank&Ben) mit der Version 1 (V1)
+<details>
+  <summary>Hilfe</summary>
+  <p>
+
+  ```PowerShell
+    docker tag azure-vote-front passcampacr.azurecr.io/azure-vote-front:v1
+```
+    </p>
+</details>
+
+#### Lasst euch noch einmal - zur Überprüfung - die vorhandenen lokalen Docker-Images anzeigen
+#### Hat sich was geändert?
+<details>
+  <summary>Hilfe</summary>
+  <p>
+
+  ```PowerShell
+    docker images
+```
+</p>
+</details>
+
+#### Pushed eure Version 1 des SQL Server Container in die Registry
+<details>
+  <summary>Hilfe</summary>
+  <p>
+
+  ```PowerShell
+    docker push passcampacr.azurecr.io/azure-vote-front:v1
+```
+    </p>
+</details>
+
+#### Lasst euch den Erfolg eurer Push-Aktion mit einer Abfrage eurer Registry anzeigen
+<details>
+  <summary>Hilfe</summary>
+  <p>
+
+  ```PowerShell
+    az acr repository show-tags --name PASSCamp-ACR --repository azure-vote-front --output table
+```
+    </p>
+</details>
