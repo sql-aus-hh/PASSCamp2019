@@ -24,7 +24,7 @@ Bitte eigenständig die Kommandozeile zusammenstellen (nicht cheaten ;-) )
   <summary>Hilfe</summary>
   <p>
 
-  '''PowerShell
+  ```PowerShell
   az group create --name RG-AzureContainerRegistry --location eastus
 \```
 </details>
