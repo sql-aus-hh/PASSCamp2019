@@ -1,6 +1,6 @@
 # PASSCamp2019
 ## Azure Kubernetes Services
-### Deployment via Portal
+### Deployment of Azure Container Registry via Powershell/CLI
 
 #### Ausgangslage für das Deployment via Portal/PowerShell
 Zuvor wurde das Thema **SQL on Linux** und **SQL on Docker** behandelt, darauf aufbauend wird diese Session sich nur mit dem Deployment und Handling von Containern mittles Kubernetes bzw Kubernetes on Azure befassen!
@@ -70,51 +70,6 @@ Bitte eigenständig die Kommandozeile zusammenstellen (nicht cheaten ;-) )
 
   ```PowerShell
     az acr list --resource-group RG-AzureContainerRegistry --query "[].{acrLoginServer:loginServer}" --output table
-```
-    </p>
-</details>
-
-#### Tagged euren SQL-Server-Container (aus dem Handson mit Frank&Ben) mit der Version 1 (V1)
-<details>
-  <summary>Hilfe</summary>
-  <p>
-
-  ```PowerShell
-    docker tag azure-vote-front passcampacr.azurecr.io/azure-vote-front:v1
-```
-    </p>
-</details>
-
-#### Lasst euch noch einmal - zur Überprüfung - die vorhandenen lokalen Docker-Images anzeigen
-#### Hat sich was geändert?
-<details>
-  <summary>Hilfe</summary>
-  <p>
-
-  ```PowerShell
-    docker images
-```
-</p>
-</details>
-
-#### Pushed eure Version 1 des SQL Server Container in die Registry
-<details>
-  <summary>Hilfe</summary>
-  <p>
-
-  ```PowerShell
-    docker push passcampacr.azurecr.io/azure-vote-front:v1
-```
-    </p>
-</details>
-
-#### Lasst euch den Erfolg eurer Push-Aktion mit einer Abfrage eurer Registry anzeigen
-<details>
-  <summary>Hilfe</summary>
-  <p>
-
-  ```PowerShell
-    az acr repository show-tags --name PASSCamp-ACR --repository azure-vote-front --output table
 ```
     </p>
 </details>
