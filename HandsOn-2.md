@@ -18,8 +18,16 @@ Auf eurer virtuellen Maschine Visual Studio Code (oder eine Powershell ISE) die 
 
 Invoke-WebRequest -Uri https://aka.ms/installazurecliwindows -OutFile .\AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'
 
+Bitte eigenständig die Kommandozeile zusammenstellen (nicht cheaten ;-) )
+#### Erstellen einer neuen Ressourcen-Gruppe 'RG-AzureContainerRegistry'
+<details>
+  <summary>Hilfe</summary>
+  <p>
 
-az group create --name RG-AzureContainerRegistry --location eastus
+  '''posh
+  az group create --name RG-AzureContainerRegistry --location eastus
+
+</details>
 
 az acr create --resource-group RG-AzureContainerRegistry --name PASSCamp-ACR --sku Basic
 
