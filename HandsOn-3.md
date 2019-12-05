@@ -45,11 +45,8 @@ Alternativ : Erstellen eines neuen Docker-Compose-Files
       sqlsystem:
       sqldata:
       sqllog:
-
-    labels:
-      kompose.service.type: LoadBalancer
 ```
-  docker-compose
+  docker-compose up
   docker tag %ImageName% passcampacr.azurecr.io/%ImageName%:v1
 ```
 
@@ -93,6 +90,7 @@ Alternativ : Erstellen eines neuen Docker-Compose-Files
 </details>
 
 #### euren neuen Container in euer Kubernetes Cluster deployen
+#### Den Filenamen ggfs anpassen, je nach dem was ihr oben (Container von Frank&Ben oder selbsterstellter Container) verwendet habt.
 <details>
   <summary>Hilfe</summary>
   <p>
