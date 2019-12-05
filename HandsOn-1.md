@@ -39,7 +39,7 @@ Unten geht es weiter mit dem Button "**Weiter: Authentifizierung**".
 
 <img src="https://www.sql-aus-hamburg.de/wp-content/uploads/2019/11/22-11-2019-06-e1574693446289.png" alt="Azure Portal" title="Azure Kubernetes Services - Aktivieren der Features für virtuelleKnoten oder Skalierungsgruppen" />
 
-Auf der neuen Seite kann man das Verhalten des Azure Kubernetes Cluster bezogen auf zu verwendnene User konfiguriert. Einmal der ServiceUser, der das Cluster aus Infrastruktursicht über Kubernetes skalieren/konfigurieren kann. Zum anderen, wie man den Zugriff auf  das Cluster gestalten möchte, hier nutzt man überlicherweise den Rollenbasierten Ansatz um den Zugriff und die Rechte der einzelnen User zu beschränken. => **R**ole**B**ase**A**ccess**C**ontrol (RBAC) aktivieren
+Auf der neuen Seite kann man das Verhalten des Azure Kubernetes Cluster bezogen auf zu verwendende User konfiguriert. Einmal der ServiceUser, der das Cluster aus Infrastruktursicht über Kubernetes skalieren/konfigurieren kann. Zum anderen, wie man den Zugriff auf  das Cluster gestalten möchte, hier nutzt man überlicherweise den Rollenbasierten Ansatz um den Zugriff und die Rechte der einzelnen User zu beschränken. => **R**ole**B**ase**A**ccess**C**ontrol (RBAC) aktivieren
 
 Für diese HandsOn-Session können die Angaben unverändert bleiben, beides wird hier erst einmal nicht benötigt!
 
