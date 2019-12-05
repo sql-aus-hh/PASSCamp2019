@@ -64,3 +64,5 @@ Jetzt heißt es warten bis das Deployment abgeschlossen ist...
 <img src="https://www.sql-aus-hamburg.de/wp-content/uploads/2019/11/22-11-2019-11-e1574696982938.png" alt="Azure Portal" title="Azure Kubernetes Services - Konfiguration und Aktivierung der unterschiedlichen Netzwerk-Bereiche sowie Loadbalancing und Endpunkte" />
 
 <img src="https://www.sql-aus-hamburg.de/wp-content/uploads/2019/11/22-11-2019-13-e1574697052974.png" alt="Azure Portal" title="Azure Kubernetes Services - Konfiguration und Aktivierung der unterschiedlichen Netzwerk-Bereiche sowie Loadbalancing und Endpunkte" />
+
+[weiter mit HandsOn 2](https://github.com/sql-aus-hh/PASSCamp2019/blob/master/HandsOn-2.md)

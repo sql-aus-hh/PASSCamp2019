@@ -73,3 +73,5 @@ Bitte eigenständig die Kommandozeile zusammenstellen (nicht cheaten ;-) )
 ```
     </p>
 </details>
+
+[weiter mit HandsOn 3](https://github.com/sql-aus-hh/PASSCamp2019/blob/master/HandsOn-3.md)

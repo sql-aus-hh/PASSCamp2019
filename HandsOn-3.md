@@ -13,26 +13,58 @@ Und die Handson-Session 1&2 wurden erfolgreich absolviert
 
 
 Bitte eigenständig die Kommandozeile zusammenstellen (nicht cheaten ;-) )
-#### Tagged euren SQL-Server-Container (aus dem Handson mit Frank&Ben) mit der Version 1 (V1)
+#### Tagged euren SQL-Server-Container (aus dem Handson mit Frank&Ben) mit der Version 1 (V1)<br>Wer diese Aufgabe nicht fertiggestellt hat, kann auch einfach einen lokalen Docker-Container erstellen und diesen mit Version 1 (V1) taggen
 <details>
   <summary>Hilfe</summary>
   <p>
 
   ```PowerShell
-    docker tag %ImageName% passcampacr.azurecr.io/%ImageName%:v1
+  docker tag %ImageName% passcampacr.azurecr.io/%ImageName%:v1
 ```
-    </p>
+
+Alternativ : Erstellen eines neuen Docker-Compose-Files 
+
+    version: '3'
+  
+    services:
+        sqlserver1:
+            image: mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+            ports:  
+              - "1433:1433"
+            environment:
+              SA_PASSWORD: "Testing1122"
+              ACCEPT_EULA: "Y"
+              MSSQL_DATA_DIR: "/var/opt/sqlserver/data"
+              MSSQL_LOG_DIR: "/var/opt/sqlserver/log"
+              MSSQL_BACKUP_DIR: "/var/opt/sqlserver/backup"
+            volumes: 
+              - sqlsystem:/var/opt/mssql/
+              - sqldata:/var/opt/sqlserver/data
+              - sqllog:/var/opt/sqlserver/log
+    volumes:
+      sqlsystem:
+      sqldata:
+      sqllog:
+
+    labels:
+      kompose.service.type: LoadBalancer
+```
+  docker-compose
+  docker tag %ImageName% passcampacr.azurecr.io/%ImageName%:v1
+```
+
+</p>
 </details>
 
-#### Lasst euch noch einmal - zur Überprüfung - die vorhandenen lokalen Docker-Images anzeigen
-#### Hat sich was geändert?
+#### Lasst euch noch einmal - zur Überprüfung - die vorhandenen lokalen Docker-Images anzeigen<br>Hat sich was geändert?
 <details>
   <summary>Hilfe</summary>
   <p>
 
   ```PowerShell
-    docker images
+  docker images
 ```
+
 </p>
 </details>
 
@@ -42,9 +74,10 @@ Bitte eigenständig die Kommandozeile zusammenstellen (nicht cheaten ;-) )
   <p>
 
   ```PowerShell
-    docker push %LogonServer%/%ImageName%:v1
+  docker push %LogonServer%/%ImageName%:v1
 ```
-    </p>
+
+  </p>
 </details>
 
 #### Lasst euch den Erfolg eurer Push-Aktion mit einer Abfrage eurer Registry anzeigen
@@ -53,7 +86,20 @@ Bitte eigenständig die Kommandozeile zusammenstellen (nicht cheaten ;-) )
   <p>
 
   ```PowerShell
-    az acr repository show-tags --name PASSCamp-ACR --repository %ImageName% --output table
+  az acr repository show-tags --name PASSCamp-ACR --repository %ImageName% --output table
 ```
-    </p>
+
+  </p>
+</details>
+
+#### euren neuen Container in euer Kubernetes Cluster deployen
+<details>
+  <summary>Hilfe</summary>
+  <p>
+
+  ```PowerShell
+  kubectl apply -f .\sqlserver-deployment.yaml
+```
+
+  </p>
 </details>
